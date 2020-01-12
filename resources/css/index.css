@@ -5,7 +5,7 @@ body {
     font-family: Serif;
 }
 
-.checkAnswer {
+.checkAnswer, .playAgain {
     margin: 21px auto;
     width: 120px;
     height: 43px;

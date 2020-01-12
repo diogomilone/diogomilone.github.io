@@ -56,30 +56,38 @@ getEarnedPoints = (guess,correctAnswer) => {
     
 }
 
-currentQuestion = getRandomQuestion(questionArray);
-
 // Here are the links to the html, setting the correct parameters
 
 let subject = document.getElementById('subject')
-subject.innerHTML = `This question is about ${currentQuestion.subject}`
-
 let scope = document.getElementById('scope')
-scope.innerHTML = `The scope of this question is: ${currentQuestion.scope}`
-
 let question = document.getElementById('question')
-question.innerHTML = currentQuestion.question
-
 let correctAnswer = document.getElementById('correct-answer')
-correctAnswer.innerHTML = `The correct answer is: ${currentQuestion.answer}%`
-
 let pointsEarned = document.getElementById('points-earned')
-pointsEarned.innerHTML = 'Points earned go here'
-
 let checkAnswer = document.getElementById('checkAnswer')
+let playAgain = document.getElementById('playAgain')
+let currentQuestion
+
+startGame = () => {
+    document.getElementById('guess').value = 0;
+    document.querySelector('.answer-container').style.visibility = 'hidden';
+    currentQuestion = getRandomQuestion(questionArray)
+
+    subject.innerHTML = `This question is about ${currentQuestion.subject}`
+    scope.innerHTML = `The scope of this question is: ${currentQuestion.scope}`
+    question.innerHTML = currentQuestion.question
+    correctAnswer.innerHTML = `The correct answer is: ${currentQuestion.answer}%`
+}
+
+startGame();
 
 // When clicked, the Check Answer button shows the correct answer and the points earned
 checkAnswer.onclick = () => {
     let guess = document.getElementById('guess').value
     document.querySelector('.answer-container').style.visibility = 'visible';
     pointsEarned.innerHTML = getEarnedPoints(guess,currentQuestion.answer)
+  }
+
+// When clicked, the Play Again button refreshes the page
+playAgain.onclick = () => {
+    startGame();
   }
