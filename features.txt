@@ -1,0 +1,13 @@
+The game works by having several players guessing an unlikely statistic.
+Player 1 takes a guess on their turn, as the other players decide if actual stat is 
+much higher, higher, lower, much lower than the guess. 
+Points awarded to Player 1: const - 200*|guess - actual%|, const = 4000
+Points awarded to other players: 
+1000 points if guessing higher/lower and correct, 
+2000 points if guessing much higher / much lower and correct,
+0 otherwise
+
+What do we need:
+1) a dataset of statistics with a) question b) scope (global, america, SP, etc) c) correct answer d) subject
+2) front-end: a guessing interface that a) shows question and scope b) takes Player 1's input c) take other players' input
+3) back-end: functions for awarding points to each player according to their guesses + scoreboard

@@ -1,0 +1,29 @@
+body {
+    background-color: #010165;
+    margin: 0px;
+    color: #baf0f0;
+    font-family: Serif;
+}
+
+.checkAnswer {
+    margin: 21px auto;
+    width: 120px;
+    height: 43px;
+    font-family: Serif;
+    background-color: #eb6536;
+    padding-top: 18px;
+    font-size: 18px;
+    text-align: center;
+    color: #010165;
+    cursor: pointer;
+}
+.question-container, .get-guess {
+    margin: auto;
+    padding-top: 18px;
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+.answer-container {
+    visibility: hidden;
+}

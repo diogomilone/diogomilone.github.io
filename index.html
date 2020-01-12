@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Guesspionage Clone</title>
+        <link href="./resources/css/index.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="flex-container">
+            <nav>
+                <ul>
+                    <li> Leaderboard </li> <li> Options </li> <li> Exit </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="question-container">
+                <h3><span id="subject"></span>. <span id="scope"></span></h3>
+                <h1 id="question"></h1>
+            </div>
+        </main>
+        <section class="get-guess">
+            <form action="submission.html" method="POST">
+                <label for="guess">Take a guess:</label>
+                <input type="number" name="guess" id="guess" min="0" max="100">
+                <br>
+                <!-- <input type="submit" id="submission" value="Check answer"> -->
+                <div id="checkAnswer" class="checkAnswer">Check answer</div>
+            </form>
+            <div class="answer-container">
+                <h1 id="correct-answer"></h1>
+                <h2 id="points-earned"></h2>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+        <script src="./main.js"></script>
+    </body>
+</html>
